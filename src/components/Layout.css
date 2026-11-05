@@ -274,6 +274,229 @@ h1 {
   margin-bottom: 0;
 }
 
+.state-panel {
+  max-width: 48rem;
+  margin: 3rem auto;
+}
+
+.state-panel progress {
+  max-width: 24rem;
+}
+
+.agent-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  margin: 0;
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, #ffffff, #f5f9ff);
+}
+
+.agent-card h3 {
+  margin-bottom: 0.6rem;
+}
+
+.agent-card > p:not(.eyebrow) {
+  color: var(--muted);
+}
+
+.agent-card .agent-meta {
+  margin-top: auto;
+  font-size: 0.875rem;
+}
+
+.agent-card button {
+  width: auto;
+  min-height: 44px;
+  margin: 0;
+}
+
+.empty-state,
+.success-state {
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: var(--surface-alt);
+}
+
+.empty-state h3,
+.success-state h4 {
+  margin-bottom: 0.5rem;
+}
+
+.empty-state p,
+.success-state p:last-of-type {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.profile-panel {
+  scroll-margin-top: 1rem;
+}
+
+.care-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.care-grid > section {
+  min-width: 0;
+}
+
+.care-grid h3,
+.booking-panel h3 {
+  font-size: 1.2rem;
+}
+
+.detail-list,
+.appointment-list {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.detail-list li {
+  display: grid;
+  gap: 0.25rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  background: #fff;
+}
+
+.detail-list span {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.booking-panel {
+  margin-top: 1.5rem;
+  padding: clamp(1rem, 2vw, 1.5rem);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: #f9fbff;
+}
+
+.booking-panel .panel-heading {
+  margin-bottom: 0.75rem;
+}
+
+.slot-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.slot-button {
+  width: 100%;
+  min-height: 3rem;
+  margin: 0;
+  white-space: normal;
+  text-align: left;
+}
+
+.slot-button[aria-pressed='true'] {
+  border-color: var(--primary);
+  background: var(--surface-alt);
+  color: var(--primary-strong);
+}
+
+.slot-button.unavailable-slot {
+  opacity: 0.65;
+}
+
+.booking-review {
+  max-width: 44rem;
+}
+
+.booking-review dl {
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  background: #fff;
+}
+
+.booking-review dl > div {
+  display: grid;
+  grid-template-columns: minmax(8rem, 0.35fr) minmax(0, 1fr);
+  gap: 0.75rem;
+  padding: 0.4rem 0;
+}
+
+.booking-review dt {
+  font-weight: 700;
+}
+
+.booking-review dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.button-row button {
+  width: auto;
+  min-height: 44px;
+  margin: 0;
+}
+
+.error-message {
+  margin: 1rem 0 0;
+  padding: 0.75rem 1rem;
+  border-left: 4px solid #b42318;
+  background: #fff4f2;
+  color: #7a271a;
+}
+
+.success-state button {
+  width: auto;
+  min-height: 44px;
+  margin-top: 1rem;
+}
+
+.appointment-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  background: #fff;
+}
+
+.appointment-row > div {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.appointment-row > div span {
+  color: var(--muted);
+}
+
+.status-badge {
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  background: #e8f5ee;
+  color: #17663a;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
 .footer {
   display: flex;
   flex-wrap: wrap;
@@ -309,6 +532,10 @@ h1 {
   .card-grid {
     grid-template-columns: 1fr;
   }
+
+  .care-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 480px) {
@@ -329,16 +556,17 @@ h1 {
   }
 
   .main-nav a {
+    min-width: 0;
     text-align: center;
   }
 
-  .hero-actions {
-    flex-direction: column;
+  .slot-grid {
+    grid-template-columns: 1fr;
   }
 
-  .primary-link,
-  .secondary-link {
-    width: 100%;
+  .booking-review dl > div {
+    grid-template-columns: 1fr;
+    gap: 0.1rem;
   }
 
   .footer {
