@@ -49,6 +49,7 @@
 }
 
 .main-nav a {
+  min-height: 44px;
   padding: 0.55rem 0.8rem;
   border-radius: 999px;
   transition: background-color 0.2s ease, color 0.2s ease;
@@ -306,5 +307,50 @@ h1 {
 
   .card-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-shell {
+    width: calc(100% - 1rem);
+    padding-top: 0.5rem;
+  }
+
+  .topbar {
+    padding: 0.9rem;
+  }
+
+  .main-nav {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.35rem;
+  }
+
+  .main-nav a {
+    text-align: center;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .primary-link,
+  .secondary-link {
+    width: 100%;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }

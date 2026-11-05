@@ -14,7 +14,8 @@
 ## 3. Build the minimal AgentClinic home page
 
 - Show the AgentClinic name and a concise welcome that reflects the mission of helping users find care and coordinate it.
-- Use semantic, accessible page structure and keep the page free of workflows or extra features.
+- Use semantic, accessible page structure and responsive layouts for phone,
+  tablet, and desktop; keep the page free of workflows or extra features.
 
 ## 4. Verify and document the development loop
 
@@ -27,6 +28,8 @@
 
 - Establish a focused Vitest command and add one smoke test that verifies the home page renders its name and welcome.
 - Keep strict TypeScript checking enabled and verify the test suite and build through `npm run validate`.
+- Verify responsive behavior at narrow and wide viewport sizes, including
+  navigation, content reflow, and absence of horizontal overflow.
 
 ## Implementation notes
 

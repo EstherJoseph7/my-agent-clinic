@@ -22,7 +22,8 @@ data until an API or persistence requirement is agreed.
 6. [x] **Build shared navigation:** add the main page structure and clear navigation
    for agent and staff tasks.
 7. [x] **Check accessibility and responsiveness:** verify semantic structure,
-   keyboard navigation, and narrow-screen layout before adding workflows.
+   keyboard navigation, and usable layouts on narrow, medium, and wide screens
+   before adding workflows.
 
 ## 2. Make the dashboard useful
 
@@ -65,10 +66,12 @@ data until an API or persistence requirement is agreed.
 23. **Verify critical flows:** test booking success, unavailable times, and
    recoverable failures end to end.
 24. **Prepare a release:** check modern-browser behavior, accessibility,
-   reliability, and production build output.
+   responsive behavior, reliability, and production build output.
 
 ## Decisions to resolve when needed
 
 Confirm account and staff permissions, appointment availability rules, what
 agent and ailment information is appropriate to display, and the required
-browser support before implementing the workflows that depend on them.
+browser support before implementing the workflows that depend on them. Each
+web feature specification should state its responsive behavior and viewport
+verification criteria.

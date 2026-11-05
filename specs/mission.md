@@ -26,7 +26,8 @@ experience should make those tasks clear to both agents and staff.
 - **Reliable by default:** show clear states and feedback, especially around
   appointment coordination.
 - **Accessible and welcoming:** build an attractive interface that works well
-  with modern browsers and assistive technology.
+  with modern browsers and assistive technology. Make the web experience
+  responsive across narrow, medium, and wide viewports.
 - **Shared understanding:** use consistent language and information for agents
   and staff.
 - **Earn trust:** handle personal and appointment information carefully; collect

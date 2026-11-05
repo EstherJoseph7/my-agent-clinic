@@ -12,6 +12,8 @@ Use a small, TypeScript-first web stack:
 - **Testing:** use Vitest for focused component and unit tests, with
   browser-level tests for critical user flows as those flows are implemented.
   Run `npm run validate` to check the production build and Vitest suite.
+- **Responsive UI:** design web interfaces to adapt across phone, tablet, and
+  desktop viewport sizes.
 
 Use stable, mutually compatible releases when each part of the stack is adopted.
 Do not add a database, hosting platform, or additional framework until a
@@ -39,4 +41,8 @@ than an assumption that those pieces already exist.
 - Prefer small dependencies and clear boundaries between UI and data access.
 - Provide loading, empty, success, and error states for user-facing workflows.
 - Verify responsive layout, keyboard access, and supported modern browsers.
+- Require every web feature spec to describe relevant narrow- and wide-viewport
+  behavior and include responsive verification in its acceptance criteria.
+- Prevent horizontal overflow and preserve readable content and usable controls
+  on narrow screens.
 - Avoid storing or logging personal or appointment data unless required.

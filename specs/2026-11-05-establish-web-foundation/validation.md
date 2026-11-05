@@ -7,6 +7,9 @@ The work is ready to merge when all of the following hold:
 - Strict TypeScript checks pass.
 - The production build completes successfully.
 - The focused Vitest smoke test passes and confirms the home page renders the AgentClinic name and mission-oriented welcome in a browser-oriented test environment.
-- The home page uses appropriate semantic structure and remains usable with keyboard navigation and on a narrow viewport.
+- The home page uses appropriate semantic structure and remains usable with
+  keyboard navigation on narrow, medium, and wide viewports.
+- Navigation and content reflow at small viewport widths without horizontal
+  overflow; key links and controls remain easy to use.
 - The page remains informational and minimal, with no workflows or extra features.
 - No API, persistence layer, or unrelated product workflow has been introduced.
