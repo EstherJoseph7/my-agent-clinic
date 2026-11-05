@@ -22,6 +22,7 @@ describe('Layout', () => {
       '#care-flow',
       '#contact',
     ]);
+    expect(links[1]).toHaveAccessibleName('Agent overview');
 
     for (const link of links) {
       expect(document.querySelector(link.getAttribute('href')!)).toBeInTheDocument();

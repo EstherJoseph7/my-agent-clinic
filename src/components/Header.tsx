@@ -1,6 +1,6 @@
 const navItems = [
   { label: 'Dashboard', href: '#overview' },
-  { label: 'Agents', href: '#agents' },
+  { label: 'Agent overview', href: '#agents' },
   { label: 'Care coordination', href: '#care-flow' },
   { label: 'Staff contact', href: '#contact' },
 ];

@@ -19,10 +19,10 @@ const dashboardSummary: DashboardStatProps[] = [
 const workspaceLinks: WorkspaceCardProps[] = [
   {
     href: '#agents',
-    title: 'Agents and shared context',
+    title: 'Agent overview',
     description:
       'Get oriented around agent information and the context staff need to coordinate support.',
-    action: 'View agent overview',
+    action: 'View shared context',
   },
   {
     href: '#care-flow',
@@ -94,7 +94,7 @@ function MainContent() {
 
       <section id="agents" className="content-panel" aria-labelledby="agents-heading">
         <div className="panel-heading">
-          <p className="eyebrow">Agent directory</p>
+          <p className="eyebrow">Agent overview</p>
           <h2 id="agents-heading">Agents and shared context</h2>
         </div>
         <p className="section-description">
