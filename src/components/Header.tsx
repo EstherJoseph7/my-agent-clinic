@@ -1,8 +1,8 @@
 const navItems = [
-  { label: 'Overview', href: '#overview' },
-  { label: 'Agents', href: '#agents' },
-  { label: 'Care flow', href: '#care-flow' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Dashboard', href: '#overview' },
+  { label: 'Agent overview', href: '#agents' },
+  { label: 'Care coordination', href: '#care-flow' },
+  { label: 'Staff contact', href: '#contact' },
 ];
 
 function Header() {

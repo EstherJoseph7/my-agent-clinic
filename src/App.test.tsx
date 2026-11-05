@@ -2,14 +2,14 @@ import { render, screen } from '@testing-library/react';
 import App from './App';
 
 describe('App', () => {
-  it('renders the AgentClinic name and welcome message', () => {
+  it('renders the dashboard overview and sample-data notice', () => {
     render(<App />);
 
     expect(
-      screen.getByRole('heading', { name: /agentclinic/i, level: 1 }),
+      screen.getByRole('heading', { name: /clinic overview/i, level: 1 }),
     ).toBeInTheDocument();
     expect(
-      screen.getByText(/agentclinic helps people find the right care and coordinate it/i),
+      screen.getByText(/illustrative sample data — not live clinic information/i),
     ).toBeInTheDocument();
   });
 });

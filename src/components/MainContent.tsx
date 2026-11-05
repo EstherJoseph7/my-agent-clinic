@@ -1,98 +1,117 @@
-const careHighlights = [
-  { label: 'Care plans', value: '3 in motion' },
-  { label: 'Agent triage', value: '24/7' },
-  { label: 'Staff handoff', value: 'ready' },
+type DashboardStatProps = {
+  label: string;
+  value: string;
+};
+
+type WorkspaceCardProps = {
+  href: string;
+  title: string;
+  description: string;
+  action: string;
+};
+
+const dashboardSummary: DashboardStatProps[] = [
+  { label: 'Agents supported', value: '12' },
+  { label: 'Care items to review', value: '4' },
+  { label: 'Staff updates', value: '3' },
 ];
+
+const workspaceLinks: WorkspaceCardProps[] = [
+  {
+    href: '#agents',
+    title: 'Agent overview',
+    description:
+      'Get oriented around agent information and the context staff need to coordinate support.',
+    action: 'View shared context',
+  },
+  {
+    href: '#care-flow',
+    title: 'Care coordination',
+    description: 'See an overview of the areas involved in coordinating care.',
+    action: 'View care coordination',
+  },
+  {
+    href: '#contact',
+    title: 'Clinic staff',
+    description: 'Reach the clinic team for help with coordination.',
+    action: 'Contact the clinic',
+  },
+];
+
+function DashboardStat({ label, value }: DashboardStatProps) {
+  return (
+    <div className="stat-card">
+      <strong>{value}</strong>
+      <span>{label}</span>
+    </div>
+  );
+}
+
+function WorkspaceCard({ href, title, description, action }: WorkspaceCardProps) {
+  return (
+    <a href={href} className="info-card access-card">
+      <h3>{title}</h3>
+      <p>{description}</p>
+      <span className="access-action">
+        {action} <span aria-hidden="true">→</span>
+      </span>
+    </a>
+  );
+}
 
 function MainContent() {
   return (
     <main>
-      <section id="overview" className="hero">
+      <section id="overview" className="hero" aria-labelledby="overview-heading">
         <div className="hero-copy">
-          <p className="eyebrow">Care coordination for people and AI agents</p>
-          <h1>AgentClinic</h1>
+          <p className="eyebrow">Agent and staff workspace</p>
+          <h1 id="overview-heading">Clinic overview</h1>
           <p className="intro">
-            AgentClinic helps people find the right care and coordinate it with AI
-            agents and clinic staff.
+            A shared starting point for agents and clinic staff to find the areas
+            they need to coordinate care.
           </p>
-          <div className="hero-actions" aria-label="Primary actions">
-            <a href="#agents" className="primary-link">
-              Explore agents
-            </a>
-            <a href="#care-flow" className="secondary-link">
-              Review care flow
-            </a>
-          </div>
         </div>
 
-        <aside className="hero-panel" aria-label="Clinic snapshot">
-          {careHighlights.map((highlight) => (
-            <div key={highlight.label} className="stat-card">
-              <strong>{highlight.value}</strong>
-              <span>{highlight.label}</span>
-            </div>
+        <aside className="hero-panel" aria-label="Illustrative dashboard summary">
+          <p className="sample-note">Illustrative sample data — not live clinic information.</p>
+          {dashboardSummary.map((item) => (
+            <DashboardStat key={item.label} {...item} />
           ))}
         </aside>
       </section>
 
-      <section id="agents" className="content-panel" aria-labelledby="agents-heading">
+      <section className="content-panel" aria-labelledby="workspaces-heading">
         <div className="panel-heading">
-          <p className="eyebrow">Overview</p>
-          <h2 id="agents-heading">Agents and shared context</h2>
+          <p className="eyebrow">Quick access</p>
+          <h2 id="workspaces-heading">Where would you like to go?</h2>
         </div>
         <div className="card-grid">
-          <article className="info-card">
-            <h3>Support workflows</h3>
-            <p>
-              Keep a clear, shared view of each user need so agents and staff can
-              respond in the right order.
-            </p>
-          </article>
-          <article className="info-card">
-            <h3>Friendly intake</h3>
-            <p>
-              Make it easy to understand symptoms, care needs, and next actions
-              without creating unnecessary friction.
-            </p>
-          </article>
-          <article className="info-card">
-            <h3>Reliable follow-up</h3>
-            <p>
-              Coordinate updates and scheduling so the right person sees the right
-              status at the right time.
-            </p>
-          </article>
+          {workspaceLinks.map((workspace) => (
+            <WorkspaceCard key={workspace.href} {...workspace} />
+          ))}
         </div>
       </section>
 
-      <section id="care-flow" className="content-panel panel-split" aria-labelledby="care-flow-heading">
-        <div>
-          <p className="eyebrow">Care flow</p>
-          <h2 id="care-flow-heading">From intake to appointment</h2>
+      <section id="agents" className="content-panel" aria-labelledby="agents-heading">
+        <div className="panel-heading">
+          <p className="eyebrow">Agent overview</p>
+          <h2 id="agents-heading">Agents and shared context</h2>
         </div>
-        <ol className="timeline" aria-label="Care coordination timeline">
-          <li>
-            <span>01</span>
-            <div>
-              <h3>Review needs</h3>
-              <p>Capture symptoms, context, and urgency in a single place.</p>
-            </div>
-          </li>
-          <li>
-            <span>02</span>
-            <div>
-              <h3>Match care</h3>
-              <p>Surface the right therapies and appointments for the situation.</p>
-            </div>
-          </li>
-          <li>
-            <span>03</span>
-            <div>
-              <h3>Coordinate follow-up</h3>
-              <p>Share updates with the user, agents, and clinic staff.</p>
-            </div>
-          </li>
-        </ol>
+        <p className="section-description">
+          Find an overview of agent information and the shared context involved
+          in care coordination.
+        </p>
+      </section>
+
+      <section id="care-flow" className="content-panel" aria-labelledby="care-flow-heading">
+        <div className="panel-heading">
+          <p className="eyebrow">Care coordination</p>
+          <h2 id="care-flow-heading">A shared view for agents and staff</h2>
+        </div>
+        <p className="section-description">
+          Agents and staff can use this shared starting point to orient
+          themselves around care information and available support.
+        </p>
       </section>
     </main>
   );
