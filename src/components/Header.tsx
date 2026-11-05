@@ -1,7 +1,7 @@
 const navItems = [
   { label: 'Dashboard', href: '#overview' },
-  { label: 'Agent overview', href: '#agents' },
-  { label: 'Care coordination', href: '#care-flow' },
+  { label: 'Agents', href: '#agents' },
+  { label: 'Appointments', href: '#appointments' },
   { label: 'Staff contact', href: '#contact' },
 ];
 
