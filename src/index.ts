@@ -1,3 +1,2 @@
-const message: string = 'TypeScript project is running!';
-
-console.log(message);
+// The browser app entry point lives in src/main.tsx.
+export {};

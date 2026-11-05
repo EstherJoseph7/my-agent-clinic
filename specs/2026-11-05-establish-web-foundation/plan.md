@@ -25,3 +25,10 @@
 
 - Establish a focused test command and add one smoke test that verifies the home page renders its name and welcome.
 - Keep strict TypeScript checking enabled and verify the smoke test and build.
+
+## Implementation notes
+
+- The app shell is organized as a reusable `Layout` component composed from three subcomponents stored in their own files: `Header`, `MainContent`, and `Footer`.
+- Each of the header, footer, and main content sections is implemented in a separate component file to keep the layout modular and easier to extend.
+- Layout-specific styling lives in `src/components/Layout.css` and is imported from the layout component.
+- The app also includes the root `src/styles.css` stylesheet so the page has the required global reset and theme variables.

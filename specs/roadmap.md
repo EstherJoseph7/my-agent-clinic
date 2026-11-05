@@ -15,13 +15,13 @@ data until an API or persistence requirement is agreed.
 4. **Add focused checks:** establish a test command and one smoke test for the
    rendered application.
 
-## 1. Create the experience shell
+## 1. Create the experience shell — complete
 
-5. **Set visual foundations:** define basic color, type, spacing, and layout
+5. [x] **Set visual foundations:** define basic color, type, spacing, and layout
    tokens.
-6. **Build shared navigation:** add the main page structure and clear navigation
+6. [x] **Build shared navigation:** add the main page structure and clear navigation
    for agent and staff tasks.
-7. **Check accessibility and responsiveness:** verify semantic structure,
+7. [x] **Check accessibility and responsiveness:** verify semantic structure,
    keyboard navigation, and narrow-screen layout before adding workflows.
 
 ## 2. Make the dashboard useful
