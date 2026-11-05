@@ -25,15 +25,12 @@ data until an API or persistence requirement is agreed.
    keyboard navigation, and usable layouts on narrow, medium, and wide screens
    before adding workflows.
 
-## 2. Make the dashboard useful
+## 2. Build the dashboard and care coordination workflows
 
 8. **Build the dashboard frame:** show the key areas agents and staff need to
    reach, using sample data.
 9. **Add dashboard states:** cover loading, empty, and recoverable error states.
 10. **Validate the dashboard:** test its main navigation and responsive layout.
-
-## 3. Add agent and care information
-
 11. **Create an agent directory:** show agents from sample data with a useful
    summary and a clear way to open a profile.
 12. **Add agent profiles:** show the information needed to understand an agent.
@@ -42,9 +39,6 @@ data until an API or persistence requirement is agreed.
 14. **Add therapies:** present therapies and their relevant descriptions.
 15. **Connect care information:** make the relationship between agents,
    ailments, and therapies clear without implying unsupported recommendations.
-
-## 4. Support appointment coordination
-
 16. **Define appointment information:** agree on the minimum appointment and
    availability fields before building booking behavior.
 17. **Show available times:** present selectable appointment times using sample
@@ -55,9 +49,6 @@ data until an API or persistence requirement is agreed.
    feedback and show the resulting appointment.
 20. **Add staff appointment access:** let staff view appointments relevant to
    their work.
-
-## 5. Connect and harden
-
 21. **Agree on data ownership and persistence:** choose an API and storage
    approach only after the required workflows and data responsibilities are
    clear.
