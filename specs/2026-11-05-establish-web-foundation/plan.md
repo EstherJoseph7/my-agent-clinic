@@ -18,13 +18,15 @@
 
 ## 4. Verify and document the development loop
 
-- Document dependency installation and development, production-build, and test commands.
+- Document dependency installation and development, production-build, test, and validation commands.
+- Use Vitest for the project's focused test suite.
+- Add `npm run validate` to run the production build and Vitest suite together.
 - Verify that the production build succeeds.
 
 ## 5. Add focused checks
 
-- Establish a focused test command and add one smoke test that verifies the home page renders its name and welcome.
-- Keep strict TypeScript checking enabled and verify the smoke test and build.
+- Establish a focused Vitest command and add one smoke test that verifies the home page renders its name and welcome.
+- Keep strict TypeScript checking enabled and verify the test suite and build through `npm run validate`.
 
 ## Implementation notes
 

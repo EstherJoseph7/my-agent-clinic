@@ -9,8 +9,9 @@ Use a small, TypeScript-first web stack:
 - **Runtime and package manager:** Node.js and npm.
 - **API:** add a Node.js/TypeScript API when the product needs shared or
   persistent data; keep its contract independent of the UI.
-- **Testing:** focused component and unit tests, with browser-level tests for
-  critical user flows as those flows are implemented.
+- **Testing:** use Vitest for focused component and unit tests, with
+  browser-level tests for critical user flows as those flows are implemented.
+  Run `npm run validate` to check the production build and Vitest suite.
 
 Use stable, mutually compatible releases when each part of the stack is adopted.
 Do not add a database, hosting platform, or additional framework until a
@@ -34,6 +35,7 @@ than an assumption that those pieces already exist.
 ## Engineering constraints
 
 - Keep strict TypeScript checks enabled and make failures visible.
+- Use Vitest as the standard test runner for validating UI and unit behavior.
 - Prefer small dependencies and clear boundaries between UI and data access.
 - Provide loading, empty, success, and error states for user-facing workflows.
 - Verify responsive layout, keyboard access, and supported modern browsers.
